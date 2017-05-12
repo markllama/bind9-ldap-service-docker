@@ -1,0 +1,34 @@
+#
+# Create a base for a database
+#
+#dn: dc=example,dc=com
+#o: Example Corporation or Something
+#description: The root entry for an example LDAP database
+# This is meant to act as an anchor for a set of demonstration databases
+# for DNS and DHCP services.
+#objectClass: top
+#objectClass: dcObject
+#objectClass: organization
+
+dn: ou=People,dc=example,dc=com
+ou: People
+description: The root object for the user database for Example Corp.
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Group,dc=example,dc=com
+ou: Group
+description: The root object for the group database for Example Corp.
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Hosts,dc=example,dc=com
+ou: Hosts
+description: The root object for the host list database for Example Corp.
+objectClass: top
+objectClass: organizationalUnit
+
+#dn: cn=Manager,dc=example,dc=com
+#cn: Manager
+#description: Rootdn
+#objectclass: organizationalRole

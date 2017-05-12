@@ -1,0 +1,10 @@
+== A DNS server backed by LDAP in a Docker container image
+
+== References
+
+* ISC Source Code via git +
+  https://www.isc.org/git/
+  
+* bind-dyndb-ldap +
+  https://pagure.io/bind-dyndb-ldap
+
