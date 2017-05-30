@@ -1,34 +1,42 @@
-#
-# Create a base for a database
-#
-#dn: dc=example,dc=com
-#o: Example Corporation or Something
-#description: The root entry for an example LDAP database
-# This is meant to act as an anchor for a set of demonstration databases
-# for DNS and DHCP services.
-#objectClass: top
-#objectClass: dcObject
-#objectClass: organization
-
-dn: ou=People,dc=example,dc=com
-ou: People
-description: The root object for the user database for Example Corp.
+dn: cn=dns,dc=example,dc=com
 objectClass: top
-objectClass: organizationalUnit
+objectClass: idnsContainer
 
-dn: ou=Group,dc=example,dc=com
-ou: Group
-description: The root object for the group database for Example Corp.
+dn: idnsName=example.com.,cn=dns,dc=example,dc=com
+DNSTTL: 3600
+MXrecord: 10 mail
+NSrecord: ns1
+NSrecord: ns2
+idnsName: example.com.
+idnsSOAexpire: 604800
+idnsSOAmName: ns1
+idnsSOAminimum: 10800
+idnsSOArName: admin
+idnsSOArefresh: 10800
+idnsSOAretry: 15
+idnsSOAserial: 2017051702
+idnsZoneActive: TRUE
+objectClass: idnsRecord
 objectClass: top
-objectClass: organizationalUnit
+objectClass: idnsZone
 
-dn: ou=Hosts,dc=example,dc=com
-ou: Hosts
-description: The root object for the host list database for Example Corp.
+dn: idnsName=mail,idnsName=example.com.,cn=dns,dc=example,dc=com
+Arecord: 192.168.1.10
+DNSTTL: 3600
+idnsName: mail
+objectClass: idnsRecord
 objectClass: top
-objectClass: organizationalUnit
 
-#dn: cn=Manager,dc=example,dc=com
-#cn: Manager
-#description: Rootdn
-#objectclass: organizationalRole
+dn: idnsName=ns1,idnsName=example.com.,cn=dns,dc=example,dc=com
+Arecord: 192.168.1.2
+DNSTTL: 3600
+idnsName: ns1
+objectClass: idnsRecord
+objectClass: top
+
+dn: idnsName=ns2,idnsName=example.com.,cn=dns,dc=example,dc=com
+Arecord: 4.2.2.1
+DNSTTL: 3600
+idnsName: ns2
+objectClass: idnsRecord
+objectClass: top

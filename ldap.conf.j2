@@ -1,0 +1,6 @@
+dynamic-db "{{ zoneid }}-ldap" {
+    library "ldap.so" ;
+    arg "uri ldap://{{ ldap_server }}";
+    arg "base {{ base_dn }}";
+    arg "auth_method none";
+};

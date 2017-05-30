@@ -1,0 +1,4 @@
+dn: cn=dns,dc=example,dc=com
+objectClass: top
+objectClass: idnsContainer
+

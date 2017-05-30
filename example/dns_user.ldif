@@ -1,0 +1,7 @@
+dn: cn=dnsupdate,ou=People,dc=example,dc=com
+objectClass: top
+objectClass: account
+objectClass: simpleSecurityObject
+cn: dnsupdate
+userid: dnsupdate
+userPassword: {SSHA}Tp6FRlitz9jUYwc6itwN+tBbD+xkUHxi
